@@ -88,7 +88,6 @@ namespace Space_invader
                 {
                     if (y is PictureBox && y.Tag == "bullet")
                     {
-
                         y.Top -= 20;
 
                         if (((PictureBox)y).Top < this.Height - 490)
@@ -125,8 +124,6 @@ namespace Space_invader
                 }
             }
         }
-
-
             private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
