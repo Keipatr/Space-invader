@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameLose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameLose.Designer.cs">
+      <DependentUpon>GameLose.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameLose.resx">
+      <DependentUpon>GameLose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuControl.resx">
       <DependentUpon>MenuControl.cs</DependentUpon>
@@ -145,6 +154,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Keyboard_right_arrow-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invader1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invader2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invader3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulletinvader.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

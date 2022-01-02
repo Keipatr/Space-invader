@@ -73,6 +73,16 @@ namespace Space_invader.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bulletinvader {
+            get {
+                object obj = ResourceManager.GetObject("bulletinvader", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap click {
             get {
                 object obj = ResourceManager.GetObject("click", resourceCulture);
@@ -106,6 +116,36 @@ namespace Space_invader.Properties {
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap invader1 {
+            get {
+                object obj = ResourceManager.GetObject("invader1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap invader2 {
+            get {
+                object obj = ResourceManager.GetObject("invader2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap invader3 {
+            get {
+                object obj = ResourceManager.GetObject("invader3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
