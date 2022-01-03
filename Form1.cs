@@ -200,6 +200,8 @@ namespace Space_invader
         private void gameOver()
         {
             timer1.Stop();
+            invaderNembak.Stop();
+            tesLaser.Stop();
             label1.Text = " Game Over";
         }
 
