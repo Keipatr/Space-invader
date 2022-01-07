@@ -142,7 +142,7 @@ namespace Space_invader
             // pictureBox18
             // 
             this.pictureBox18.Image = global::Space_invader.Properties.Resources.invader3;
-            this.pictureBox18.Location = new System.Drawing.Point(535, 153);
+            this.pictureBox18.Location = new System.Drawing.Point(535, 114);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(61, 40);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,7 +153,7 @@ namespace Space_invader
             // pictureBox17
             // 
             this.pictureBox17.Image = global::Space_invader.Properties.Resources.invader3;
-            this.pictureBox17.Location = new System.Drawing.Point(159, 153);
+            this.pictureBox17.Location = new System.Drawing.Point(159, 114);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(61, 40);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +164,7 @@ namespace Space_invader
             // pictureBox16
             // 
             this.pictureBox16.Image = global::Space_invader.Properties.Resources.invader3;
-            this.pictureBox16.Location = new System.Drawing.Point(253, 153);
+            this.pictureBox16.Location = new System.Drawing.Point(253, 114);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(61, 40);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -175,7 +175,7 @@ namespace Space_invader
             // pictureBox15
             // 
             this.pictureBox15.Image = global::Space_invader.Properties.Resources.invader3;
-            this.pictureBox15.Location = new System.Drawing.Point(349, 153);
+            this.pictureBox15.Location = new System.Drawing.Point(349, 114);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(61, 40);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,7 +186,7 @@ namespace Space_invader
             // pictureBox14
             // 
             this.pictureBox14.Image = global::Space_invader.Properties.Resources.invader3;
-            this.pictureBox14.Location = new System.Drawing.Point(441, 153);
+            this.pictureBox14.Location = new System.Drawing.Point(441, 114);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(61, 40);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +197,7 @@ namespace Space_invader
             // pictureBox13
             // 
             this.pictureBox13.Image = global::Space_invader.Properties.Resources.invader3;
-            this.pictureBox13.Location = new System.Drawing.Point(67, 153);
+            this.pictureBox13.Location = new System.Drawing.Point(67, 114);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(61, 40);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -208,7 +208,7 @@ namespace Space_invader
             // pictureBox12
             // 
             this.pictureBox12.Image = global::Space_invader.Properties.Resources.invader2;
-            this.pictureBox12.Location = new System.Drawing.Point(535, 81);
+            this.pictureBox12.Location = new System.Drawing.Point(535, 58);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(61, 40);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -219,7 +219,7 @@ namespace Space_invader
             // pictureBox11
             // 
             this.pictureBox11.Image = global::Space_invader.Properties.Resources.invader2;
-            this.pictureBox11.Location = new System.Drawing.Point(67, 81);
+            this.pictureBox11.Location = new System.Drawing.Point(67, 58);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(61, 40);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -230,7 +230,7 @@ namespace Space_invader
             // pictureBox10
             // 
             this.pictureBox10.Image = global::Space_invader.Properties.Resources.invader2;
-            this.pictureBox10.Location = new System.Drawing.Point(159, 81);
+            this.pictureBox10.Location = new System.Drawing.Point(159, 58);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(61, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -241,7 +241,7 @@ namespace Space_invader
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Space_invader.Properties.Resources.invader2;
-            this.pictureBox9.Location = new System.Drawing.Point(253, 81);
+            this.pictureBox9.Location = new System.Drawing.Point(253, 58);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(61, 40);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -252,7 +252,7 @@ namespace Space_invader
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Space_invader.Properties.Resources.invader2;
-            this.pictureBox8.Location = new System.Drawing.Point(441, 81);
+            this.pictureBox8.Location = new System.Drawing.Point(441, 58);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(61, 40);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,7 +263,7 @@ namespace Space_invader
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Space_invader.Properties.Resources.invader2;
-            this.pictureBox7.Location = new System.Drawing.Point(349, 81);
+            this.pictureBox7.Location = new System.Drawing.Point(349, 58);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(61, 40);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

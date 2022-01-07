@@ -54,15 +54,11 @@ namespace Space_invader
             //invader gerak dan kebawah, kena player = gameover
             foreach (Control x in this.Controls)
             {
-                if (x is PictureBox && x.Tag == "invader")
+                if (x is PictureBox && x.Tag.ToString() == "invader")
                 {
                     if (((PictureBox)x).Bounds.IntersectsWith(player.Bounds))
                     {
-                        gameOver();
-                        this.Hide();
-                        GameLose formGameLose = new GameLose();
-                        formGameLose.ShowDialog();
-                        this.Close();
+                        gameOver();                        
                     }
                           ((PictureBox)x).Left += speed;
                     if (((PictureBox)x).Left > 720)
@@ -71,7 +67,7 @@ namespace Space_invader
                         ((PictureBox)x).Left = -50;
                     }
                 }
-                if (x is PictureBox && x.Tag == "boss")
+                if (x is PictureBox && x.Tag.ToString() == "boss")
                 {
                           ((PictureBox)x).Left += speedboss;
                     if (((PictureBox)x).Left > 720)
@@ -84,7 +80,7 @@ namespace Space_invader
                 {
                     if (y is PictureBox && y.Tag.ToString() == "bullet")
                     {
-                        y.Top -= 5;
+                        y.Top -= 3;
 
                         if (((PictureBox)y).Top < this.Height - 490)
                         {
@@ -116,9 +112,9 @@ namespace Space_invader
                 {
                     foreach (Control j in this.Controls)
                     {
-                        if (i is PictureBox && i.Tag == "boss")
+                        if (i is PictureBox && i.Tag.ToString() == "boss")
                         {
-                            if (j is PictureBox && j.Tag == "bullet")
+                            if (j is PictureBox && j.Tag.ToString() == "bullet")
                             {
 
                                 if (i.Bounds.IntersectsWith(j.Bounds))
@@ -137,13 +133,7 @@ namespace Space_invader
                     }
                 }
                 label1.Text = "Score : " + score;
-                invaderBoss();
-                //if (score > totalEnemies - 1)
-                //{
-                //    gameOver();
-                //    MessageBox.Show("You Win");
-                //    break;
-                //}
+                invaderBoss();                
             }
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -185,8 +175,9 @@ namespace Space_invader
                 PictureBox boss = new PictureBox();
                 boss.Image = Properties.Resources.boss;
                 boss.BackgroundImageLayout = ImageLayout.Zoom;
-                boss.Size = new Size(150, 150);
+                boss.Size = new Size(190, 170);
                 boss.Tag = "boss";
+                boss.Name = "boss";
                 boss.Location = new Point(210, 12);
                 this.Controls.Add(boss);
                 boss.BringToFront();
@@ -217,12 +208,33 @@ namespace Space_invader
             this.Controls.Add(invaderBullet);
             invaderBullet.BringToFront();
         }
+        private void  BossBulet(PictureBox b)
+        {
+            PictureBox bossBulet1 = new PictureBox();
+            bossBulet1.Location = new Point(b.Location.X + b.Width / 3, b.Location.Y + 20);
+            bossBulet1.Size = new Size(5, 20);
+            bossBulet1.BackgroundImage = Properties.Resources.bulletinvader;
+            bossBulet1.BackgroundImageLayout = ImageLayout.Stretch;
+            bossBulet1.Tag = "Laser";
+            this.Controls.Add(bossBulet1);            
+            PictureBox bossBulet2 = new PictureBox();
+            bossBulet2.Location = new Point(b.Location.X + b.Width / 1 - 5, b.Location.Y + 20);
+            bossBulet2.Size = new Size(5, 20);
+            bossBulet2.BackgroundImage = Properties.Resources.bulletinvader;
+            bossBulet2.BackgroundImageLayout = ImageLayout.Stretch;
+            bossBulet2.Tag = "Laser";
+            this.Controls.Add(bossBulet2);            
+        }
         private void gameOver()
         {
             timer1.Stop();
             invaderNembak.Stop();
             tesLaser.Stop();
             label1.Text = " Game Over";
+            this.Hide();
+            GameLose formGameLose = new GameLose();
+            formGameLose.ShowDialog();
+            this.Close();
         }
 
         private void invaderNembak_Tick(object sender, EventArgs e)
@@ -302,8 +314,15 @@ namespace Space_invader
                 if (angka == 18)
                 {
                     invaderBullet(pictureBox2);
+                }               
+            }
+            foreach (Control b in this.Controls)
+            {
+                if (b is PictureBox && b.Name == "boss")
+                {
+                    PictureBox boss = (PictureBox)b;
+                    BossBulet(boss);
                 }
-                int bos = rand.Next(1);
             }
         }
 
@@ -314,7 +333,10 @@ namespace Space_invader
                 if (i is PictureBox && i.Tag.ToString() == "Laser")
                 {
                     i.Top += 5;
-
+                    if(score == 18) // untuk boss
+                    {
+                        i.Top += 8;
+                    }
                     if (i.Location.Y >= this.Height)
                     {
                         this.Controls.Remove(i);
@@ -357,7 +379,7 @@ namespace Space_invader
             if (powerheartspeed == ctrheart) //tiap 1 detik
             {
                 ctrheart = 0;
-                int peluang = rnd.Next(100); //hitung peluang kemunculan
+                int peluang = rnd.Next(200); //hitung peluang kemunculan
 
                 if (peluang > 5) //peluang 1/5 artinya kemungkinan 5 detik muncul 1x
                 {
@@ -365,7 +387,7 @@ namespace Space_invader
                     {
                         heartshow = true;
                         pbHeart.Top = 0; //posisi dikembalikan ke atas
-                        pbHeart.Visible = true; //ditampilkan
+                        pbHeart.Visible = true; //ditampilkan                        
                     }
                 }
             }
