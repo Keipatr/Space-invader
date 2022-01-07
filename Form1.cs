@@ -30,7 +30,7 @@ namespace Space_invader
         bool thundershow = false; //belum muncul
         bool heartshow = false;   //belum muncul 
         Random rnd = new Random();
-        int powerheartspeed   = 3 * 50; //speed kemunculan hati 50 artinya perdetik dengan interval timer 20
+        int powerheartspeed   = 5 * 50; //speed kemunculan hati 50 artinya perdetik dengan interval timer 20
         int powerthunderspeed = 3 * 50;
         int ctrheart = 0;
         int ctrthunder = 0;
@@ -60,11 +60,27 @@ namespace Space_invader
                     {
                         gameOver();                        
                     }
-                          ((PictureBox)x).Left += speed;
-                    if (((PictureBox)x).Left > 720)
+                    ((PictureBox)x).Left += speed;
+                    if (((PictureBox)x).Left > 720 && row == 1)
+                    {
+                        ((PictureBox)x).Left = -50;
+                        count++;
+                    }
+                    if (count == 18 - score)
+                    {
+                        count = 0;
+                        row = 2;
+                    }
+                    if (((PictureBox)x).Left > 720 && row == 2)
                     {
                         ((PictureBox)x).Top += ((PictureBox)x).Height + 25;
                         ((PictureBox)x).Left = -50;
+                        count1++;
+                    }
+                    if (count1 == 18 - score)
+                    {
+                        row = 1;
+                        count1 = 0;
                     }
                 }
                 if (x is PictureBox && x.Tag.ToString() == "boss")
@@ -407,7 +423,7 @@ namespace Space_invader
                 ctrthunder = 0;
                 int peluang2 = rnd.Next(100); //hitung peluang kemunculan
 
-                if (peluang2 > 100) //peluang 1/5 artinya kemungkinan 5 detik muncul 1x
+                if (peluang2 > 20) //peluang 1/5 artinya kemungkinan 5 detik muncul 1x
                 {
                     if (thundershow == false && heartshow == false) //jika power heart nya belum tampil
                     {
