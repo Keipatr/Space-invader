@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC64B808-F6EA-4043-8A3C-49761639FA62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Space_invader</RootNamespace>
+    <AssemblyName>Space invader</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YouWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YouWin.Designer.cs">
+      <DependentUpon>YouWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameLose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameLose.Designer.cs">
+      <DependentUpon>GameLose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuControl.Designer.cs">
+      <DependentUpon>MenuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuScreen.Designer.cs">
+      <DependentUpon>MenuScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameLose.resx">
+      <DependentUpon>GameLose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuControl.resx">
+      <DependentUpon>MenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuScreen.dje-NE.resx">
+      <DependentUpon>MenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuScreen.resx">
+      <DependentUpon>MenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YouWin.resx">
+      <DependentUpon>YouWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invaders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard_A-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard_D-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard_space-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard_Left_arrow-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard_right_arrow-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invader1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invader2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invader3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulletinvader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youwin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level up.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
