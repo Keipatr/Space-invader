@@ -12,6 +12,7 @@ namespace Space_invader
 {
     public partial class Form1 : Form
     {
+        //oke
         bool goleft;
         bool goright;
         int speed = 5;
